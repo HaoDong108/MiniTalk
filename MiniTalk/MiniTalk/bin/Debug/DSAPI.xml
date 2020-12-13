@@ -1,0 +1,1403 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DSAPI
+</name>
+</assembly>
+<members>
+<member name="T:DSAPI.My.Resources.Resources">
+<summary>
+  一个强类型的资源类，用于查找本地化的字符串等。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.ResourceManager">
+<summary>
+  返回此类使用的缓存的 ResourceManager 实例。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.Culture">
+<summary>
+  重写当前线程的 CurrentUICulture 属性
+  重写当前线程的 CurrentUICulture 属性。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.apiicon">
+<summary>
+  查找 System.Drawing.Bitmap 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.dsencode">
+<summary>
+  查找 System.Byte[] 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.DSWEBAPIERRORCODE">
+<summary>
+  查找类似 0001:参数数量不匹配
+0002:参数类型转换失败
+0003:指定的API未开放
+0004:发生了内部错误
+0005:已限制该客户端类型对API的调用
+0006:您的IP或IP段已在黑名单中
+0007:已达到最大调用次数
+0008:需要授权才可调用
+0009:API库正在维护中，暂停访问
+0010:此API要求传递参数才可调用
+0011:当有传递某个参数名称时，所有参数均须带名称传递
+0012:仅当数据类型为Byte数组或String类型时才可返回Base64文本
+0013:仅当数据类型为Byte数组或String类型时才可返回文件下载类型
+0014:仅当数据类型为Byte数组时才可返回图像类型
+0015:身份或授权验证失败
+0016:不能在一个DSWebAPI类中同时存在多个默认执行方法
+0017:默认执行方法不应带有任何参数
+0018:默认执行方法不应返回任何值
+0019:循环执行的方法不应带有任何参数
+0020:循环执行的方法不应返回任何值
+0021:循环执行的参数不能叠加，优先级：毫秒间隔&gt;周期
+0022:指定的方法未加入到循环执行列表
+0033:调用频率 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.dswebapiicon">
+<summary>
+  查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.DSWEBAPI编译文件头">
+<summary>
+  查找类似 Friend Class XXXX引导文件
+    Private Shared _Url As String = &quot;http://127.0.0.1&quot;
+    Private Shared _Enc As System.Text.Encoding = Text.Encoding.UTF8
+    Public Shared Property 编码 As System.Text.Encoding
+        Get
+            Return _Enc
+        End Get
+        Set(value As System.Text.Encoding)
+            _Enc = value
+        End Set
+    End Property
+    Public Shared Property 服务器Url As String
+        Get
+            Return _Url
+        End Get
+        Set(value As String)
+            If val [字符串的其余部分被截断]&quot;; 的本地化字符串。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.Shadow">
+<summary>
+  查找 System.Drawing.Bitmap 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.webdata">
+<summary>
+  查找 System.Byte[] 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.字符转拼音">
+<summary>
+  查找 System.Byte[] 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.小盾牌">
+<summary>
+  查找 System.Drawing.Bitmap 类型的本地化资源。
+</summary>
+</member>
+<member name="P:DSAPI.My.Resources.Resources.身份证地址代码对照">
+<summary>
+  查找类似 110000 北京市
+110100 北京市市辖区
+110101 北京市东城区
+110102 北京市西城区
+110103 北京市崇文区
+110104 北京市宣武区
+110105 北京市朝阳区
+110106 北京市丰台区
+110107 北京市石景山区
+110108 北京市海淀区
+110109 北京市门头沟区
+110111 北京市房山区
+110112 北京市通州区
+110113 北京市顺义区
+110200 北京市县
+110221 北京市昌平县
+110224 北京市大兴县
+110226 北京市平谷县
+110227 北京市怀柔县
+110228 北京市密云县
+110229 北京市延庆县
+120000 天津市
+120100 天津市市辖区
+120101 天津市和平区
+120102 天津市河东区
+120103 天津市河西区
+120104 天津市南开区
+120105 天津市河北区
+120106 天津市红桥区
+120107 天津市塘沽区
+120108 天津市汉沽区
+120109 天津市大港区
+120110 天津市东丽区
+120111 天津市西青区
+120112 天 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+</summary>
+</member>
+<member name="T:DSAPI.DSWebAPI">
+ <summary>
+ <b>详细文档请参考<a href="Http://www.dylikesoftcom/dswebapi">DSWEBAPI专栏</a></b>
+ </summary>
+</member>
+<member name="P:DSAPI.DSWebAPI.当前客户端">
+ <summary>
+ 获取正在请求该方法的WebAPI客户端，该属性不适用于默认执行的方法。
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:DSAPI.DSWebAPI.身份验证">
+ <summary>
+ 以继承于DSWebAPI身份验证接口的类Type作为验证方式
+ </summary>
+</member>
+<member name="M:DSAPI.DSWebAPI.身份验证.#ctor(System.Type)">
+ <summary>
+ 以继承于DSWebAPI身份验证接口的类Type作为验证方式
+ </summary>
+ <param name="验证方式"></param>
+</member>
+<member name="T:DSAPI.DSWebAPI.默认执行">
+ <summary>
+ <para>当本类在DSWebAPI缓存中实例化后默认执行的方法，在同一个类中只允许有一个默认执行的方法且不带任何参数。<br/>
+注意:该方法将不会公开也不允许客户端访问。
+</para>
+ </summary>
+</member>
+<member name="M:DSAPI.DSWebAPI.清理调用IP缓存列表">
+ <summary>
+ 将所有API方法的IP统计缓存列表清空，但不清除调用次数
+ </summary>
+</member>
+<member name="M:DSAPI.DSWebAPI.清理调用次数">
+ <summary>
+ 将所有API方法的调用次数清零，但不清除调用IP缓存列表
+ </summary>
+</member>
+<member name="T:DSAPI.DSAPI信息">
+ <summary>
+ 显示当前DSAPI.dll的信息
+ </summary>
+</member>
+<member name="P:DSAPI.DSAPI信息.DSAPI文件路径">
+ <summary>
+ 返回当前DSAPI.dll文件所在物理路径
+ </summary>
+ <returns>当前DSAPI.dll文件所在物理路径</returns>
+</member>
+<member name="P:DSAPI.DSAPI信息.DSAPI文件版本">
+ <summary>
+ 返回当前DSAPI.dll文件版本号
+ </summary>
+ <returns>当前DSAPI.dll文件版本号</returns>
+</member>
+<member name="P:DSAPI.DSAPI信息.DSAPI年号">
+ <summary>
+ 返回当前DSAPI.dll文件版本中的年号部分
+ </summary>
+ <returns>当前DSAPI.dll文件版本中的年号部分</returns>
+</member>
+<member name="P:DSAPI.DSAPI信息.作者">
+ <summary>
+ 返回当前DSAPI.dll文件的开发作者名称
+ </summary>
+ <returns>当前DSAPI.dll文件的开发作者名称，固定为『DYLIKE』</returns>
+</member>
+<member name="P:DSAPI.DSAPI信息.QQ">
+ <summary>
+ 返回当前DSAPI.dll文件的开发作者QQ号
+ </summary>
+ <returns>当前DSAPI.dll文件的开发作者QQ号</returns>
+</member>
+<member name="P:DSAPI.DSAPI信息.QQ群">
+ <summary>
+ 返回DSAPI官方支持QQ群号数组
+ </summary>
+ <example>
+ <code>
+ Console.WriteLine(join(DSAPI信息.QQ群,",")
+ '输出 419130936,780470675
+ </code>
+ </example>
+ <returns>DSAPI官方支持QQ群号数组</returns>
+</member>
+<member name="M:DSAPI.DSAPI信息.导出所有函数到txt文件(System.String,DSAPI.DSAPI信息.分级符)">
+ <summary>
+ 通过反射方式将当前DSAPI.dll文件的所有函数名称（包括分支）导出到文本文件
+ <paramref name="保存到">指定要保存并生成的文本文档路径</paramref>
+ <paramref name="分级符号">导出时是否使用分级符号，默认为Tab字符</paramref>
+ </summary>
+</member>
+<member name="T:DSAPI.DSAPI信息.分级符">
+ <summary>
+ 导出DSAPI函数列表到文本文件时使用的分级符号
+ </summary>
+</member>
+<member name="T:DSAPI.串口通讯">
+ <summary>
+ 封装并简化一个串口通讯
+ </summary>
+<example>
+<para>创建一个简单的DS串口通讯</para>
+<para><img src="../CodesImages/DSAPI之串口通讯DEMO.png"></img></para>
+<para><a href="../Demos/DSAPI之串口通讯DEMO.rar">下载本示例源码(VB.Net)</a></para>
+<code source="E:\CodesDemo\串口通讯_vb.txt" language="vbnet"></code>
+<code source="E:\CodesDemo\串口通讯_cs.txt" language="cs"></code>
+ </example>
+</member>
+<member name="T:DSAPI.串口通讯.配置信息">
+ <summary>
+ 对串口进行各项配置
+ </summary>
+</member>
+<member name="P:DSAPI.串口通讯.配置信息.串口名称">
+ <summary>
+ 指示当前已经打开的串口名称
+ </summary>
+ <returns></returns>
+</member>
+<member name="E:DSAPI.串口通讯.收到数据">
+ <summary>
+ 当打开的串口接收到数据时触发此事件
+ </summary>
+ <param name="ComName">指示当前是哪个串口发来的数据</param>
+ <param name="e">指示从串口接收到的数据</param>
+</member>
+<member name="E:DSAPI.串口通讯.串口打开失败">
+ <summary>
+ 试图打开串口但不成功时触发
+ </summary>
+ <param name="ComName">试图打开的串口名称</param>
+</member>
+<member name="E:DSAPI.串口通讯.串口打开成功">
+ <summary>
+ 指定串口打开成功后触发
+ </summary>
+ <param name="ComName">打开的串口名称</param>
+</member>
+<member name="E:DSAPI.串口通讯.串口被关闭">
+ <summary>
+ 主动或被动关闭指定串口时触发
+ </summary>
+ <param name="ComName">串口名称</param>
+</member>
+<member name="M:DSAPI.串口通讯.显示串口属性配置窗口(System.Windows.Forms.Form,System.Boolean)">
+ <summary>
+ 弹出一个窗口,内含当前设备串口列表,该窗口中属性可返回用户选定的串口名称
+ </summary>
+ <param name="宿主窗体">指定该弹出窗口将被作为哪个窗体的附属窗体</param>
+ <param name="模式化窗体">是否以模式化显示该弹出窗口</param>
+</member>
+<member name="P:DSAPI.串口通讯.串口已经打开">
+ <summary>
+ 返回当前类中指定的串口是否已经打开
+ </summary>
+ <returns>打开:True<para></para>关闭:False</returns>
+</member>
+<member name="P:DSAPI.串口通讯.串口对象">
+ <summary>
+ 返回当前串口类中的SerialPort实体
+ </summary>
+ <returns>SerialPort实体</returns>
+</member>
+<member name="P:DSAPI.串口通讯.配置">
+ <summary>
+ 串口相关配置信息
+ </summary>
+ <returns>配置信息</returns>
+</member>
+<member name="M:DSAPI.串口通讯.应用配置">
+ <summary>
+ 使串口类应用当前设定的配置信息，<b>应用配置</b>在串口关闭或已打开时均可操作。
+ </summary>
+</member>
+<member name="M:DSAPI.串口通讯.发送数据(System.Byte[])">
+ <summary>
+ 向打开的串口发送数据,如果串口未打开则将自动跳过
+ </summary>
+ <param name="S1">要发送的数据</param>
+</member>
+<member name="M:DSAPI.串口通讯.关闭串口">
+ <summary>
+ 关闭打开的串口
+ </summary>
+</member>
+<member name="M:DSAPI.串口通讯.打开串口(System.String)">
+ <summary>
+ 打开指定名称的串口，如<b>COM1</b>
+ </summary>
+ <param name="串口名称">要打开的串口名称，如<b>COM1</b></param>
+</member>
+<member name="T:DSAPI.串口通讯.发送模式">
+ <summary>
+ 指示数据将以何种方式发送至串口
+ </summary>
+</member>
+<member name="M:DSAPI.串口通讯.读取数据_String(System.String,System.Int32,System.Boolean)">
+ <summary>
+ 向串口发送字符串数据并等待返回,编码随配置信息而定
+ </summary>
+ <param name="发送数据">要发送的字符串</param>
+ <param name="等待超时时间_毫秒">在此期间进行阻塞,直到接收到数据或达到超时时间</param>
+ <param name="追加CRC16校验">是否自动追加CRC16校验码</param>
+ <returns>返回接收到的字符串,编码随配置信息而定</returns>
+</member>
+<member name="M:DSAPI.串口通讯.读取数据_Bytes(System.Byte[],System.Int32,System.Boolean)">
+ <summary>
+ 向串口发送字节数组并等待返回
+ </summary>
+ <param name="发送数据">要发送的字节数组</param>
+ <param name="等待超时时间_毫秒">在此期间进行阻塞,直到接收到数据或达到超时时间</param>
+ <param name="追加CRC16校验">是否自动追加CRC16校验码</param>
+ <returns>返回接收到的字节数组</returns>
+</member>
+<member name="M:DSAPI.串口通讯.读取数据_Bytes(System.String,DSAPI.串口通讯.发送模式,System.Int32,System.Boolean)">
+ <summary>
+  向串口发送字节数组并等待返回,编码随配置信息而定
+ </summary>
+ <param name="发送数据">要发送的字节数组</param>
+ <param name="模式">指示是按<b>ASC字符</b>模式发送还是<b>HEX16进制</b>模式发送</param>
+ <param name="等待超时时间_毫秒">在此期间进行阻塞,直到接收到数据或达到超时时间</param>
+ <param name="追加CRC16校验">是否自动追加CRC16校验码</param>
+ <returns></returns>
+</member>
+<member name="M:DSAPI.串口通讯.读取数据_String(System.String,System.Boolean)">
+ <summary>
+ 向串口发送字符串数据并等待返回,编码及超时时间随配置信息而定
+ </summary>
+ <param name="发送数据">要发送的字符串</param>
+ <param name="追加CRC16校验">是否自动追加CRC16校验码</param>
+ <returns>返回接收到的字符串,编码随配置信息而定</returns>
+</member>
+<member name="M:DSAPI.串口通讯.读取数据_Bytes(System.Byte[],System.Boolean)">
+ <summary>
+  向串口发送字节数组并等待返回,超时时间随配置信息而定
+ </summary>
+ <param name="发送数据">要发送的字节数组</param>
+ <param name="追加CRC16校验">是否自动追加CRC16校验码</param>
+ <returns></returns>
+</member>
+<member name="M:DSAPI.串口通讯.读取数据_Bytes(System.String,DSAPI.串口通讯.发送模式,System.Boolean)">
+ <summary>
+ 向串口发送字符串数据并等待返回,编码及超时时间随配置信息而定
+ </summary>
+ <param name="发送数据">要发送的字符串</param>
+ <param name="追加CRC16校验">是否自动追加CRC16校验码</param>
+ <returns>返回接收到的字节数组</returns>
+</member>
+<member name="T:DSAPI.串口通讯.附加功能">
+ <summary>
+ 串口类中额外提供的功能
+ </summary>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.十六进制字串转字节(System.String)">
+ <summary>
+ 将一串以16进制表示的字符串转为了字节数组,如"AA BB CC"将被转换为Byte(){0xAA,0xBB,0xCC}"
+ </summary>
+ <param name="S">要被转换的以16进制表示的字符串,如"AA BB CC",建议以空格分割</param>
+ <returns>返回转换后的字节数组</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.逆序(System.String,System.Boolean)">
+ <summary>
+ 将一串以16进制表示的字符串以16进制方式反转顺序,如"A1 B2 C3"将被转换为"C3 B2 A1"
+ </summary>
+ <param name="S">要进行逆序操作的以16进制表示的字符串</param>
+ <param name="去除空格">是否去除字符串内所有空格字符</param>
+ <returns>返回经过逆序处理的字符串</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.批量补零(System.String)">
+ <summary>
+ 将一串以16进制表示的字符串自动填充字符"0",如"A1 B C D2"将被转换为"A1 0B 0C D2"
+ </summary>
+ <param name="S1">需要指补零的字符串</param>
+ <returns>返回经批量补零后字符串</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.两位补零(System.String)">
+ <summary>
+ 将指定字符串自动填充字符"0",如"A"转为"0A",仅当字符不足2位时才会被补零
+ </summary>
+ <param name="B">要被自动补零的字符串</param>
+ <returns>返回经两位补零后的字符串</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.四位补零(System.String)">
+ <summary>
+ 将指定字符串自动填充字符"0",如"A"转为"000A",仅当字符不足4位时才会被补零
+ </summary>
+ <param name="B">要被自动补零的字符串</param>
+ <returns>返回经四位补零后的字符串</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.校验数据完整(System.String)">
+ <summary>
+ 通过CRC16校验方式判定字符串是否完整,提前是该字符串最后4个字符确定是被作为CRC16校验码
+ </summary>
+ <example>
+ <para>校验设备返回的字符串是否完整</para>
+ <code source="E:\CodesDemo\CRC16完整性校验_文本_vb.txt" language="vbnet"></code>
+ <code source="E:\CodesDemo\CRC16完整性校验_文本_cs.txt" language="cs"></code>
+ </example>
+ <param name="DataString">要检查的字符串</param>
+ <returns>完整:True<para></para>不完整:False</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.校验数据完整(System.Byte[])">
+ <summary>
+ 通过CRC16校验方式判定字节数组是否完整,提前是该字符串最后4个字符确定是被作为CRC16校验码
+ </summary>
+ <example>
+ <para>校验设备返回的字符串是否完整</para>
+ <code source="E:\CodesDemo\CRC16完整性校验_bytes_vb.txt" language="vbnet"></code>
+ <code source="E:\CodesDemo\CRC16完整性校验_bytes_cs.txt" language="cs"></code>
+ </example>
+ <param name="e">要检查的字节数组</param>
+ <returns>完整:True<para></para>不完整:False</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.获取CRC校验值(System.String)">
+ <summary>
+ 获取追加了CRC16校验的以16进制表示的字符串
+ </summary>
+ <param name="S">要追加CRC16的以16进制表示的字符串</param>
+ <example>
+ <code language="vbnet">
+ dim S as string="AA BB CC DD"
+ Console.WriteLine(获取CRC校验值(S))
+ '输出:
+ 'AA BB CC DD C4 80
+ </code>
+ <code language="cs">
+String S = "AA BB CC DD";
+Console.WriteLine(获取CRC校验值(S));
+//输出:
+//AA BB CC DD C4 80
+ </code>
+ </example>
+ <returns>返回追加了CRC16校验的以16进制表示的字符串</returns>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.获取所有串口设备">
+ <summary>
+ 获取本机包含的所有可用串口设备,包括物理串口和虚拟串口
+ </summary>
+ <returns>返回检测到的串口设备列表</returns>
+ <note type="important">通过本功能检测所有串口设备<b>较为耗时</b>,在确定没有新的串口设备接入或拔出时请勿高频调用</note>
+</member>
+<member name="M:DSAPI.串口通讯.附加功能.获取包含指定设备名称的串口列表(System.String)">
+ <summary>
+ 获取本机包含的所有可用串口设备,这些串口设备名称包含指定的字符串,包括物理串口和虚拟串口
+ </summary>
+ <param name="S">检测时设备名称需要包含的字符串,如"Usb"</param>
+ <returns>返回检测到的串口设备列表</returns>
+ <note type="important">通过本功能检测所有串口设备<b>较为耗时</b>,在确定没有新的串口设备接入或拔出时请勿高频调用</note>
+</member>
+<member name="T:DSAPI.串口通讯.公共模块">
+ <summary>
+ 全局的公共模块,在项目中一个或多个DS串口类均可通过该模块来处理消息事件,如收到数据等
+ </summary>
+</member>
+<member name="T:DSAPI.串口通讯.公共模块.事件订阅">
+ <summary>
+ 在项目中一个或多个DS串口类均可订阅该事件来处理消息事件,如收到数据等
+ </summary>
+ <param name="SenderName">指示该事件是哪个DS串口触发的</param>
+ <param name="消息类型">指示触发的消息类型,如发送数据完成、接收数据完成等</param>
+ <param name="Message">事件产生的具体消息或数据</param>
+</member>
+<member name="M:DSAPI.串口通讯.公共模块.添加事件侦听(DSAPI.串口通讯.公共模块.事件订阅)">
+ <summary>
+ 在任何地方添加事件侦听,以订阅DS串口事件消息
+ </summary>
+ <param name="触发">指定当订阅的DS串口事件触发时,转由哪个委托方法进行处理</param>
+</member>
+<member name="M:DSAPI.串口通讯.公共模块.删除事件侦听(System.Delegate)">
+ <summary>
+ 删除一个已添加的事件订阅
+ </summary>
+ <param name="触发">要从订阅列表中删除的委托方法</param>
+</member>
+<member name="M:DSAPI.串口通讯.公共模块.广播事件(System.String,DSAPI.串口通讯.公共模块.消息类型,System.Object)">
+ <summary>
+ 向DS串口的公共模块广播一条自定义消息,该消息将被所有订阅的对象获取
+ </summary>
+ <param name="SendName">指示该广播消息的发送者自定义名称</param>
+ <param name="MsgType">消息类型</param>
+ <param name="Msg">要广播发送的具体消息或数据</param>
+</member>
+<member name="T:DSAPI.串口通讯.显示串口选择界面">
+ <summary>
+ 显示一个包含了下拉列表的小型窗口,下拉列表中将列出本机所有串口设备,包括物理串口和虚拟串口
+ </summary>
+</member>
+<member name="M:DSAPI.串口通讯.显示串口选择界面.选择的串口名称(System.Boolean)">
+ <summary>
+ 显示串口选择窗口,并获取用户选定的串口名称
+ </summary>
+ <param name="列表中显示关闭串口项">是否在下拉列表中添加"关闭串口"项,该项也会被作为返回值使用</param>
+ <returns></returns>
+</member>
+<member name="M:DSAPI.串口通讯.显示串口选择界面.选择的串口名称(System.String,System.Boolean)">
+ <summary>
+ 显示指定窗口标题的串口选择窗口,并获取用户选定的串口名称
+ </summary>
+ <param name="列表中显示关闭串口项">是否在下拉列表中添加"关闭串口"项,该项也会被作为返回值使用</param>
+ <returns></returns>
+</member>
+<member name="F:DSAPI.图形图像.鼠标指针.CURSORINFO.flags">
+ <summary>
+ 0=隐藏,1=显示
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.从可执行文件获取小图标(System.String)">
+ <summary>
+ 获取小图标
+ </summary>
+ <param name="EXE或DLL路径"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.从可执行文件获取大图标(System.String)">
+ <summary>
+ 获取大图标
+ </summary>
+ <param name="EXE或DLL路径"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.获取文件夹图标(System.String,System.Boolean)">
+ <summary>
+ 获取文件夹图标
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.获取扩展名关联图标(System.String,System.Boolean)">
+ <summary>
+ 获取注册表关联图标
+ </summary>
+ <param name="扩展名">扩展名</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.获取图片文件缩略图(System.String,System.Drawing.Size)">
+ <summary>
+ 获取图片缩略图
+ </summary>
+ <param name="图片文件路径"></param>
+ <param name="需要的缩略图尺寸"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.获取绘制文字所需大小(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Int32,System.Int32)">
+ <summary>
+ 测量获取绘制文字所需大小,大小将增加预增加的宽度和高度
+ </summary>
+ <param name="要绘制的文本">要绘制的文本</param>
+ <param name="字体">字体</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.透明度(System.Drawing.Bitmap@,System.Double)">
+ <summary>
+ 调整图像透明度
+ </summary>
+ <param name="要应用透明特效的图像">要调整透明度的图像</param>
+ <param name="透明度">亮度值,范围0%-100%</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.投影(System.Drawing.Bitmap@,System.Int32,System.Int32)">
+ <summary>
+ 图像投影效果
+ </summary>
+ <param name="要应用投影特效的图像">要应用模糊特效的图像</param>
+ <param name="影子大小"></param>
+ <param name="影子浓度">影子浓度,最佳取值1-50</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.外发光(System.Drawing.Bitmap@,System.Drawing.Color,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ 图像外发光效果
+ </summary>
+ <param name="要应用外发光的图像"></param>
+ <param name="光晕颜色"></param>
+ <param name="光晕大小"></param>
+ <param name="光晕浓度"></param>
+ <param name="挖空处理"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.投影(System.Drawing.Bitmap@,System.Int32,System.Int32,System.Drawing.Point)">
+ <summary>
+ 图像投影效果
+ </summary>
+ <param name="要应用投影特效的图像">要应用模糊特效的图像</param>
+<param name="影子大小"></param>
+ <param name="影子浓度">影子浓度,最佳取值1-50</param>
+ <param name="偏移量">投影自左上角位置开始偏移的像素距离</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.挖空投影(System.Drawing.Bitmap@,System.Int32,System.Int32)">
+ <summary>
+ 图像投影效果
+ </summary>
+ <param name="要应用挖空投影特效的图像">要应用挖空投影特效的图像</param>
+ <param name="影子大小"></param>
+ <param name="影子浓度">影子浓度,最佳取值1-50</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.挖空投影(System.Drawing.Bitmap@,System.Int32,System.Int32,System.Drawing.Point)">
+ <summary>
+ 图像投影效果
+ </summary>
+ <param name="要应用挖空投影特效的图像">要应用挖空投影特效的图像</param>
+ <param name="影子大小"></param>
+ <param name="影子浓度">影子浓度,最佳取值1-50</param>
+ <param name="偏移量">投影自左上角位置开始偏移的像素距离</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.模糊(System.Drawing.Bitmap@,System.Int32)">
+ <summary>
+ 图像模糊效果
+ </summary>
+ <param name="要应用模糊特效的图像">要应用模糊效果的图像</param>
+ <param name="模糊半径">模糊半径,取值范围5-100</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.应用透明度遮罩(System.Drawing.Bitmap@,System.Drawing.Bitmap)">
+ <summary>
+ 将指定图像使用指定遮罩图的透明度
+ </summary>
+ <param name="要应用透明度遮罩的图像"></param>
+ <param name="透明遮罩"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.灰度(System.Drawing.Bitmap@)">
+ <summary>
+ 图像灰度效果
+ </summary>
+ <param name="要应用灰度特效的图像">要应用灰度特效的图像</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.黑与白(System.Drawing.Bitmap@,System.Int32)">
+ <summary>
+ 图像黑白效果
+ </summary>
+ <param name="要应用黑白特效的图像">要应用黑白特效的图像</param>
+ <param name="分量值">加亮或变暗的分量,值为-100到100</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.对比度(System.Drawing.Bitmap@,System.Int32,System.Single)">
+ <summary>
+ 更改图像对比度
+ </summary>
+ <param name="要应用更改对比度的图像">要应用黑白特效的图像</param>
+ <param name="分量值">加亮或变暗的分量,值为-127到127</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.亮度(System.Drawing.Bitmap@,System.Int32)">
+ <summary>
+ 调整图像亮度
+ </summary>
+ <param name="要调整亮度的图像">要调整亮度的图像</param>
+ <param name="亮度值_负128到128">亮度值,范围-128,128</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.反色(System.Drawing.Bitmap@)">
+ <summary>
+ 调整图像透明度
+ </summary>
+ <param name="要应用反色特效的图像">要应用反色特效的图像</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.保留通道(System.Drawing.Bitmap@,DSAPI.图形图像.色彩通道)">
+ <summary>
+ 保留图像指定色彩
+ </summary>
+ <param name="要应用保留色彩通道特效的图像">只保留指定色彩通道特效的图像</param>
+ <param name="要保留的色彩通道">指定哪种颜色通道应当保留,其余部分灰度处理</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.动画.淡出淡入(System.Windows.Forms.Control@,System.Drawing.Bitmap,System.Double)">
+ <summary>
+ 对指定控件背景实现新图像的淡出淡入效果
+ </summary>
+ <param name="要使用背景淡出淡入的控件"></param>
+ <param name="要淡入显示的新图像"></param>
+ <param name="动画速度_0到1">取值范围0-1,默认0.01</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.动画.淡出淡入(System.Windows.Forms.Control@,System.Drawing.Bitmap)">
+ <summary>
+ 对指定控件背景实现新图像的淡出淡入效果
+ </summary>
+ <param name="要使用背景淡出淡入的控件"></param>
+ <param name="要淡入显示的新图像"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.动画.淡入(System.Windows.Forms.Control@,System.Drawing.Bitmap)">
+ <summary>
+ 对指定控件背景实现新图像的淡入效果
+ </summary>
+ <param name="要使用背景淡入的控件"></param>
+ <param name="要淡入显示的新图像"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.动画.淡入(System.Windows.Forms.Control@,System.Drawing.Bitmap,System.Double)">
+ <summary>
+ 对指定控件背景实现新图像的淡入效果
+ </summary>
+ <param name="要使用背景淡入的控件"></param>
+ <param name="要淡入显示的新图像"></param>
+ <param name="动画速度_0到1">取值范围0-1,默认0.005</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.动画.淡出(System.Windows.Forms.Control@,System.Double)">
+ <summary>
+ 对指定控件背景实现新图像的淡出效果
+ </summary>
+ <param name="要使用背景淡出的控件"></param>
+ <param name="动画速度_0到1">取值范围0-1,默认0.01</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.图形图像.动画.淡出(System.Windows.Forms.Control@)">
+ <summary>
+ 对指定控件背景实现新图像的淡出效果
+ </summary>
+ <param name="要使用背景淡出的控件"></param>
+ <remarks></remarks>
+</member>
+<member name="T:DSAPI.图形图像.彩色文字图像.数值调整">
+ <summary>
+ 格式：ChValue=显示文本,目标控件名称,绑定的属性名称,最小值,最大值,当前值
+ </summary>
+</member>
+<member name="P:DSAPI.图形图像.彩色文字图像.输出图像">
+ <summary>
+ 最终输出图像
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.图形图像.彩色文字图像.字体">
+ <summary>
+ 字体
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.图形图像.彩色文字图像.描边颜色">
+ <summary>
+ 文字描边颜色
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.摄像头.摄像头_avicap32.在指定控件上启动视频预览(System.IntPtr,System.Drawing.Rectangle,System.Int32)">
+ <summary>
+ 开始显示图像
+ </summary>
+</member>
+<member name="M:DSAPI.摄像头.摄像头_avicap32.停止预览">
+ <summary>
+ 停止显示
+ </summary>
+</member>
+<member name="M:DSAPI.摄像头.摄像头_avicap32.停止录像">
+ <summary>
+ 停止录像
+ </summary>
+</member>
+<member name="M:DSAPI.QQ用户相关.获取昵称(System.String)">
+ <summary>
+ 获取指定<paramref name="QQ号"/>的昵称
+ </summary>
+ <example>
+  <code>
+  ‘获取QQ号为20353841的QQ昵称
+  Dim NickName As String=获取昵称("20353841")
+  MsgBox(NickName)
+       </code></example>
+ <param name="QQ号">必须至少5位长度的<see cref="T:System.String"/>类型,可转换为<see cref="T:DSAPI.QQ用户相关.QQ昵称和号码"/>类型
+ </param>
+ <exception cref="M:Microsoft.VisualBasic.Information.IsNothing(System.Object)">无互联网连接</exception>
+ <returns>返回获取到的QQ昵称</returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.反射.当前方法执行步骤顺序(System.String)">
+ <summary>
+ 获取当前方法执行过程顺序，并以指定的连接符连接，如Main -> Form1_Load -> Test
+ </summary>
+ <param name="步骤连接符"></param>
+ <returns></returns>
+</member>
+<member name="M:DSAPI.反射.序列化.序列化(System.String,System.Object)">
+ <summary>
+ 序列化到文件
+ </summary>
+ <param name="FilePath">文件路径</param>
+ <param name="Obj">要序列化的对象</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.反射.序列化.反序列化(System.String)">
+ <summary>
+ 从文件反序列化
+ </summary>
+ <param name="FilePath">文件路径</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.添加路径节点到TreeView(System.Windows.Forms.TreeView,System.String)">
+ <summary>
+ 将路径添加到目标TreeView
+ </summary>
+ <param name="T">要添加到的Treeview</param>
+ <param name="节点路径">完整的树路径</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.添加路径节点到TreeView(System.Windows.Forms.TreeView,System.String[])">
+ <summary>
+ 将路径数组批量添加到目标TreeView
+ </summary>
+ <param name="T">要添加到的Treeview</param>
+ <param name="节点路径数组">完整的树路径数组</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.添加路径节点到TreeView(System.Windows.Forms.TreeView,System.Collections.ObjectModel.ReadOnlyCollection{System.String})">
+ <summary>
+ 将路径数组批量添加到目标TreeView
+ </summary>
+ <param name="T">要添加到的Treeview</param>
+ <param name="节点路径数组">完整的树路径数组</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.通过路径查找节点(System.Windows.Forms.TreeView,System.String)">
+ <summary>
+ 从指定TreeView查找指定树路径的唯一节点
+ </summary>
+ <param name="Tv">要在其中查找的TreeView</param>
+ <param name="路径">完整的树路径</param>
+ <returns>返回一个节点</returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.清除指定路径节点的子节点(System.Windows.Forms.TreeView,System.String)">
+ <summary>
+ 从指定TreeView中清空指定树路径中最后一个节点
+ </summary>
+ <param name="Tv">要在其中清空树路径中最后一个节点的TreeView</param>
+ <param name="路径">完整的树路径</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.将节点绑定到文件系统(System.Windows.Forms.TreeView,System.String,System.Boolean)">
+ <summary>
+ 以逐层添加模式将指定TreeView控件绑定到驱动器以显示驱动器文件目录
+ </summary>
+ <param name="T">目标TreeView</param>
+ <param name="文件夹路径">要显示的文件夹路径</param>
+ <param name="点击节点时加载子文件列表">是否添加点击事件以支持用户操作</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.TreeView控件.解除节点与文件系统的绑定关系(System.Windows.Forms.TreeView)">
+ <summary>
+ 从目标TreeView解除驱动器绑定并清除内容
+ </summary>
+ <param name="T">目标TreeView</param>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.控件.Form窗体.透明窗体样式显示图像(System.Windows.Forms.Form,System.Drawing.Bitmap,System.Byte)">
+ <summary>
+ 将一个窗体以UpdateLayeredWindow方式显示为指定的PNG格式图像
+ </summary>
+ <param name="要显示透明图像的窗体"></param>
+ <param name="要显示的透明图像"></param>
+ <param name="透明度_0到255"></param>
+ <note type="important">如果发现图像显示不完整,请确认窗体当前大小是否足够显示指定的图像</note>
+ <example>
+ <para>显示PNG异形窗体</para>
+ <para>素材图片,添加至资源文件</para>
+ <para><img src="../CodesImages/251958-20190225155934366-602538992.png"/></para>
+ <para>运行后效果</para>
+ <para><img src="../CodesImages/251958-20190225155949563-2079818713.png"/></para>
+ <para>示例源码</para>
+ <code language="vbnet">
+ Me.Size = My.Resources._1409908158443933277.Size
+DSAPI.控件.Form窗体.透明窗体样式显示图像(Me, My.Resources._1409908158443933277, 255)
+DSAPI.控件.Form窗体.鼠标点击任意位置拖动窗体(Me)
+</code>
+<code language="cs">
+this.Size = My.Resources._1409908158443933277.Size;
+DSAPI.控件.Form窗体.透明窗体样式显示图像(this, My.Resources._1409908158443933277, 255);
+DSAPI.控件.Form窗体.鼠标点击任意位置拖动窗体(this);
+ </code>        
+ </example>
+</member>
+<member name="T:DSAPI.控件.文件拖放助手">
+ <summary>
+ 可对控件加入文件拖放支持，该操作无需手动开启控件的AllowDrop属性。
+ </summary>
+ <example>
+ <para>对窗体控件加入文件拖放支持</para>
+ <code source="E:\CodesDemo\文件拖放助手_vb.txt" language="vbnet"></code>
+ <code source="E:\CodesDemo\文件拖放助手_cs.txt" language="cs"></code>
+ </example>
+ <remarks>
+ <note type="important">注意：请在控件完全初始化完成后再使用<b>初始化</b>，建议将初始化写在窗体的<b>Shown</b>事件过程</note>
+ </remarks>
+</member>
+<member name="E:DSAPI.控件.文件拖放助手.拖入文件">
+ <summary>
+ 当用户将一个或多个文件拖至控件上时触发
+ </summary>
+ <param name="控件">指示用户将文件拖至哪个控件上</param>
+ <param name="文件路径">用户拖入的文件列表</param>
+</member>
+<member name="P:DSAPI.控件.文件拖放助手.支持扩展名">
+ <summary>
+ 批示哪些文件类型将被拖放助手接受并导致触发拖入文件事件
+ </summary>
+ <returns>支持的文件类型列表</returns>
+</member>
+<member name="F:DSAPI.控件.文件拖放助手.绑定控件列表">
+ <summary>
+ 指示哪些控件将被文件拖放助手自动绑定文件拖放操作
+ </summary>
+</member>
+<member name="M:DSAPI.控件.文件拖放助手.初始化">
+ <summary>
+ 对配置中添加的控件列表进行自动化事件绑定，仅当初始化完成后，目标控件才能起到文件拖放支持作用。
+ </summary>
+</member>
+<member name="T:DSAPI.Win7特性.进度条状态">
+ <summary>
+ 设置进度条相应的样式
+ <note type="important">本功能不支持XP或更低版本的操作系统</note>
+ </summary>
+</member>
+<member name="M:DSAPI.Win7特性.设置进度条状态(System.Windows.Forms.ProgressBar,DSAPI.Win7特性.进度条状态)">
+ <summary>
+ 使ProgressBar控件应用相应的样式
+ <note type="caution">本功能不支持XP或更低版本的操作系统</note> 
+ </summary>
+ <param name="进度条">要设置样式的ProgressBar控件</param>
+ <param name="状态">要设置的进度条状态,如<b>正常</b>、<b>错误</b>、<b>暂停</b>等</param>
+ <example>
+ <para>将指定PrgressBar进度条控件设置为指定的样式</para>
+ <para><img src="../CodesImages/进度条WIN7风格.gif"/></para>
+ <para><a href="../Demos/DSAPI对Winform中Progressbar控件的WIN7风格样式控制.rar">下载本示例项目源码</a></para>
+ <code language="vb" source="e:\codesdemo\进度条WIN7风格_vb.txt"></code>
+ <code language="cs" source="e:\codesdemo\进度条WIN7风格_cs.txt"></code>
+ </example>
+</member>
+<member name="M:DSAPI.Win7特性.任务栏特效.初始化">
+ <summary>
+ 在应用Windows7任务栏特效前，必须先初始化
+ </summary>
+</member>
+<member name="M:DSAPI.Win7特性.任务栏特效.设置任务栏进度(System.Windows.Forms.Control,System.Int32,System.Int32)">
+ <summary>
+ <note type="important">窗体必须已经显示且已应用过<c>DSAPI.Win7特性.任务栏特效.初始化</c>
+ <para>如在Form1_Shown中添加<c>DSAPI.Win7特性.任务栏特效.初始化</c></para>
+ </note>
+ 在高于XP的操作系统中当前窗口所在任务栏按钮上显示指定进度的进度条
+ </summary>
+ <example>
+ <para>设置"Form1"窗口对应的任务栏按钮显示50%的进度</para>
+ <code> DSAPI.Win7特性.任务栏特效.设置任务栏进度(Form1, 50, 100)</code>
+ </example>
+ <param name="所属窗口">要设置任务栏进度的对应窗口</param>
+ <param name="当前值">设置进度条最大值</param>
+ <param name="最大值">设置进度条当前值</param>
+</member>
+<member name="M:DSAPI.Win7特性.任务栏特效.设置任务栏进度条状态(System.Windows.Forms.Control,DSAPI.Win7特性.任务栏特效.任务栏进度条状态)">
+ <summary>
+ <note type="important">窗体必须已经显示且已应用过<c>DSAPI.Win7特性.任务栏特效.初始化</c>
+ <para>如在Form1_Shown中添加<c>DSAPI.Win7特性.任务栏特效.初始化</c></para>
+ </note>
+ 在高于XP的操作系统中当前窗口所在任务栏按钮上设置已显示进度条的样式
+ </summary>
+ <example>
+ <para>设置几种任务栏进度条样式样式</para>
+ <img src="../CodesImages/DSAPI之任务栏进度条.png"/>
+ <img src="../CodesImages/DSAPI之任务栏进度条2.gif"/>
+ <code> DSAPI.Win7特性.任务栏特效.设置任务栏进度(Form1, 50, 100)</code>
+ </example>
+ <param name="所属窗口">要设置任务栏进度样式的对应窗口</param>
+ <param name="状态">指示要显示何种进度条样式</param>
+</member>
+<member name="P:DSAPI.网络.HTTP监听.允许外网连接">
+ <summary>
+ 是否允许外网访问本服务
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听.绑定端口">
+ <summary>
+ 本服务欲绑定的监听端口号
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听.使用参数前导符">
+ <summary>
+ 是否使用参数前导符，当此属性设置为True时，客户端访问时若没有以指定参数前导符开头的请求将被丢弃。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听.参数前导符">
+ <summary>
+ 设置或获取参数前导符
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听.编码">
+ <summary>
+ 确定解析用户URL以及返回给用户的数据使用何种字符编码
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听_指令版.允许外网连接">
+ <summary>
+ 是否允许外网访问本服务
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听_指令版.绑定端口">
+ <summary>
+ 本服务欲绑定的监听端口号
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听_指令版.使用参数前导符">
+ <summary>
+ 是否使用参数前导符，当此属性设置为True时，客户端访问时若没有以指定参数前导符开头的请求将被丢弃。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听_指令版.参数前导符">
+ <summary>
+ 设置或获取参数前导符
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DSAPI.网络.HTTP监听_指令版.监听状态">
+ <summary>
+ 确定解析用户URL以及返回给用户的数据使用何种字符编码
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.获取域名指向的IP(System.String)">
+ <summary>
+ 获取域名指向的IP,如通过动态域名获取IP
+ </summary>
+ <param name="不包括http的域名">要解析成IP的域名,不包括http://开头</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.网络.局域网广播._Port">
+ <summary>
+ 局域网广播器_客户端
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网广播.开始接收广播">
+ <summary>
+ 开始接收广播消息
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网广播.开始接收广播(System.Int32)">
+ <summary>
+ 开始接收广播消息
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网广播.停止接收广播">
+ <summary>
+ 停止接收
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:DSAPI.网络.局域网组播.局域网组播_客户端">
+ <summary>
+ 局域网广播器_客户端
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网组播.局域网组播_客户端.开始接收组播(System.String,System.Int32)">
+ <summary>
+ 开始接收广播消息
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网组播.局域网组播_客户端.开始接收组播">
+ <summary>
+ 开始接收组播消息
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网组播.局域网组播_客户端.开始接收组播(System.Int32)">
+ <summary>
+ 开始接收广播消息
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:DSAPI.网络.局域网组播.局域网组播_客户端.停止接收组播">
+ <summary>
+ 停止接收
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:DSAPI.网络.局域网组播.局域网组播_服务端">
+ <summary>
+ 局域网广播器_服务端
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:DSAPI.键盘鼠标钩子">
+ <summary>
+全局钩子
+ </summary>
+</member>
+<member name="M:DSAPI.键盘鼠标钩子.#ctor">
+ <summary>
+ 默认构造器 - 自动开始钩子
+ </summary>
+</member>
+<member name="T:DSAPI.键盘鼠标钩子.HookProc">
+ <summary>
+ Hook Function
+ </summary>
+ <param name="nCode">HC_ACTION或HC_NOREMOVE</param>
+ <param name="wParam">表按键Virtual Key</param>
+ <param name="lParam">与WM_键按下同</param>
+ <returns>若讯息要被处理传0反之传1</returns>
+</member>
+<member name="M:DSAPI.键盘鼠标钩子.SetWindowsHookEx(DSAPI.键盘鼠标钩子.HookType,DSAPI.键盘鼠标钩子.HookProc,System.Int32,System.Int32)">
+ <summary>
+ 本函数是用于启动Hook设置。
+ </summary>
+ <param name="idHook">Hook的类型，即处理的消息类型。</param>
+ <param name="Lpfn">Hook子程（函数或过程）的地址指针。如果dwThreadId参数为0或是一个由别的进程创建的线程的标识，lpfn必须指向DLL中的Hook子程。 除此以外，lpfn可以指向当前进程的一段Hook子程代码</param>
+ <param name="hMod">是应用程序实例的句柄，标识包含lpfn所指的子程的DLL。如果dwThreadId 标识当前进程创建的一个线程，而且子程代码位于当前进程，hMod必须为NULL。</param>
+ <param name="dwThreadId">与安装Hook子程相关联的线程的标识符，如果为0，Hook子程与所有的线程关联。 </param>
+ <returns>函数成功则返回Hook子程的句柄，失败返回NULL。</returns>
+</member>
+<member name="M:DSAPI.键盘鼠标钩子.UnhookWindowsHookEx(System.Int32)">
+ <summary>
+ 本函数是解除Hook之用。
+ </summary>
+ <param name="hHook">Hook函数的句柄。</param>
+ <returns>函数成功则返回TRUE，失败返回FALSE。</returns>
+</member>
+<member name="M:DSAPI.键盘鼠标钩子.CallNextHookEx(System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 本函数的作用是将当前Hook链中的Hook信息传递给下一个Hook。
+ </summary>
+ <param name="hHook">当前Hook的句柄，一个应用程序接收这个句柄，作为先前调用SetWindowsHookEx函数的结果。</param>
+ <param name="nCode">传递到当前Hook过程的Hook代码，下一个Hook过程使用这段代码去决定如何处理Hook信息。</param>
+ <param name="wParam">传递给当前Hook过程的wParam值，它的具体含义是由当前Hook链中的相关Hook的类型决定的。</param>
+ <param name="lParam">传递给当前Hook过程的lParam值，它的具体含义是由当前Hook链中的相关Hook的类型决定的。</param>
+</member>
+<member name="M:DSAPI.文件.系统右键菜单.#ctor">
+ <summary>Default constructor</summary>
+</member>
+<member name="M:DSAPI.文件.系统右键菜单.Finalize">
+ <summary>Ensure all resources get released</summary>
+</member>
+<member name="M:DSAPI.文件.系统右键菜单.GetContextMenuInterfaces(DSAPI.文件.系统右键菜单.IShellFolder,System.IntPtr[],System.IntPtr@)">
+ <summary>Gets the interfaces to the context menu</summary>
+ <param name="oParentFolder">Parent folder</param>
+ <param name="arrPIDLs">PIDLs</param>
+ <returns>true if it got the interfaces, otherwise false</returns>
+</member>
+<member name="M:DSAPI.文件.ShellContextMenuException.#ctor">
+ <summary>Default contructor</summary>
+</member>
+<member name="M:DSAPI.文件.ShellContextMenuException.#ctor(System.String)">
+ <summary>Constructor with message</summary>
+ <param name="message">Message</param>
+</member>
+<member name="T:DSAPI.文件.CMD命令行进程代理">
+ <summary>
+ 用来和CMD.exe或指定exe进行输出重定向的简化使用工具，可隐藏或显式地启动一个cmd.exe，并将输出流、输入流和错误流重定向至代理，通过事件触发方式与之交互。
+ </summary>
+ <example>
+ <para>输出和输出控制台<b>CMD.EXE</b>内容</para>
+ <para><img src="../CodesImages/251958-20190514143031705-856083432.gif"/></para>
+ <code language="vb" source="e:\codesdemo\CMD命令行_vb.txt"></code>
+ <code language="cs" source="e:\codesdemo\CMD命令行_c#.txt"></code>
+ </example>
+</member>
+<member name="T:DSAPI.文件.FolderNameEditor">
+ <summary>
+ FolderBrowser 的设计器基类
+ </summary>
+</member>
+<member name="T:DSAPI.文件.文件夹选择对话框">
+ <summary>
+ Vista 样式的选择文件对话框的基类
+ </summary>
+</member>
+<member name="M:DSAPI.文件.文件夹选择对话框.#ctor">
+ <summary>
+ 初始化 FolderBrowser 的新实例
+ </summary>
+</member>
+<member name="P:DSAPI.文件.文件夹选择对话框.选定路径">
+ <summary>
+ 获取在 FolderBrowser 中选择的文件夹路径
+ </summary>
+</member>
+<member name="M:DSAPI.文件.文件夹选择对话框.打开对话框(System.Windows.Forms.IWin32Window)">
+ <summary>
+ 向用户显示 FolderBrowser 的对话框
+ </summary>
+ <param name="宿主">任何实现 System.Windows.Forms.IWin32Window（表示将拥有模式对话框的顶级窗口）的对象。</param>
+ <returns></returns>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_Processor">
+ <summary>
+  CPU 处理器 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_Processor_LoadPercentage">
+ <summary>
+ CPU使用率
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_PhysicalMemory">
+ <summary>
+ 物理内存条
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_Keyboard">
+ <summary>
+ 键盘
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_PointingDevice">
+ <summary>
+ 输入设备
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_FloppyDrive">
+ <summary>
+ 软盘驱动器
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_DiskDrive">
+ <summary>
+ 硬盘驱动器
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.DiskDrive_SerialNumber">
+ <summary>
+ 硬盘序列号
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_CDROMDrive">
+ <summary>
+ 光盘驱动器
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_BaseBoard">
+ <summary>
+ 主板
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_BIOS">
+ <summary>
+ BIOS芯片
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_SoundDevice">
+ <summary>
+ 多媒体设备,声卡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_USBController">
+ <summary>
+ USB控制器
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_NetworkAdapter">
+ <summary>
+ 网络适配器
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.NetworAdapterMAC">
+ <summary>
+ 网卡MAC地址
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_Printer">
+ <summary>
+ 打印机
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_PrintJob">
+ <summary>
+ 打印机任务
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_POTSModem">
+ <summary>
+ MODEM调制解调器
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DSAPI.硬件信息.WMIName.Win32_VideoController">
+ <summary>
+ 显卡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:DSAPI.Hdd.AtapiDevice">
+ 
+ ATAPI驱动器相关
+ 
+</member>
+</members>
+</doc>

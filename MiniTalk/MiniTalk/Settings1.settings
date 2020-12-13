@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MiniTalk" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="常规设置" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{"历史消息保存数":30,"消息发送时间提示间隔":5,"快捷截图":true}</Value>
+    </Setting>
+    <Setting Name="传输设置" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{"保存路径":"C:\\Program Files\\MiniTalk\\DownLoad","下载完毕后自动打开文件":false,"屏蔽所有文件消息":false,"文件接收大小最大上限":5120,"屏蔽的后缀名":[]}</Value>
+    </Setting>
+    <Setting Name="提醒设置" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{"提醒类别_文本消息":true,
+"提醒类别_文件消息":true,
+"提醒类别_图片消息":true,
+"提醒类别_事件消息":true,
+"群消息提醒":true,
+"群消息红点标注":true,
+"置顶者强提醒":false,
+"右下角浮动提醒":false,
+"强提醒模式_对话框":true,
+"强提醒模式_托盘消息":false,
+"悬浮提醒_公共会话悬浮提醒":true,
+"悬浮提醒_用户消息悬浮提醒":true
+}</Value>
+    </Setting>
+    <Setting Name="用户管理" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{"备注表":[],"黑名单":[]}</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

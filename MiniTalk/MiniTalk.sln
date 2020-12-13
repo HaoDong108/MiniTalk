@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniTalk", "MiniTalk\MiniTalk.csproj", "{34823103-5D4B-466C-A880-BCADA8BDD28E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniTalk.RemoteControl", "MiniTalk.RemoteControl\MiniTalk.RemoteControl.csproj", "{D801A924-2500-414F-AA60-CC1611AAFD1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMScrollBar", "LMScrollBar\LMScrollBar.csproj", "{CA4AD880-B13F-42D9-8033-C5767FA6B32C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34823103-5D4B-466C-A880-BCADA8BDD28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34823103-5D4B-466C-A880-BCADA8BDD28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34823103-5D4B-466C-A880-BCADA8BDD28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34823103-5D4B-466C-A880-BCADA8BDD28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D801A924-2500-414F-AA60-CC1611AAFD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D801A924-2500-414F-AA60-CC1611AAFD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D801A924-2500-414F-AA60-CC1611AAFD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D801A924-2500-414F-AA60-CC1611AAFD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4AD880-B13F-42D9-8033-C5767FA6B32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4AD880-B13F-42D9-8033-C5767FA6B32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4AD880-B13F-42D9-8033-C5767FA6B32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4AD880-B13F-42D9-8033-C5767FA6B32C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA49C4B7-C27F-4C42-929D-DF36F7346C21}
+	EndGlobalSection
+EndGlobal

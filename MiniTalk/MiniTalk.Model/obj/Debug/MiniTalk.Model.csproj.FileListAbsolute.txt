@@ -1,0 +1,6 @@
+E:\source\repos\MiniTalk\MiniTalk.Model\bin\Debug\MiniTalk.Model.dll
+E:\source\repos\MiniTalk\MiniTalk.Model\bin\Debug\MiniTalk.Model.pdb
+E:\source\repos\MiniTalk\MiniTalk.Model\obj\Debug\MiniTalk.Model.csproj.CoreCompileInputs.cache
+E:\source\repos\MiniTalk\MiniTalk.Model\obj\Debug\MiniTalk.Model.dll
+E:\source\repos\MiniTalk\MiniTalk.Model\obj\Debug\MiniTalk.Model.pdb
+E:\source\repos\MiniTalk\MiniTalk.Model\obj\Debug\MiniTalk.Model.csprojAssemblyReference.cache
