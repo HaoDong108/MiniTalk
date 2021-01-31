@@ -46,21 +46,21 @@
 
 ### 创建角色页面
 
-![image-20210131202313158](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202313158.png)
+![Image 20210131202313158](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202313158.png)
 
 ### 头像选择
 
-![image-20210131202431816](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202431816.png)
+![Image 20210131202431816](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202431816.png)
 
 ### 主体界面
 
-![image-20210131202612162](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202612162.png)
+![Image 20210131202612162](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202612162.png)
 
-![image-20210131202756421](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202756421.png)
+![Image 20210131202756421](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202756421.png)
 
 ### 程序设置
 
-![image-20210131202827129](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202827129.png)
+![Image 20210131202827129](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202827129.png)
 
 ### 远程协助
 
