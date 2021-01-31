@@ -1,6 +1,7 @@
 # MiniTalk项目简介
 
 + 项目创建时间:2019-11-8 
++ 采用框架:.NetFrameWork 4.5
 
 ## 功能描述
 
@@ -12,31 +13,54 @@
 ---
 ### 文件发送
 1. 文件发送只能发送单个文件,若有多个请压缩发送 
+
 2. 输入框支持粘贴文件,粘贴后直接发送 
+
 3. 出于性能和学校机房配置考虑,公共回话只能发送小于10MB的文件,私人会话无限制 
-4. ---
+
+   ---
+
+### 远程协助
+
+1. 在和和单个用户的聊天面板中会显示远程协助按钮
+
+2. 支持邀请和发起,等待对方同意后即可建立连接,采用RDP 的Wndows Com组件,效果不错
+
+   
+
 ### 其他功能:
+
 1. 有多个同时在线用户时支持点击放大镜根据ip/备注/昵称模糊查找 
 2. :窗口支持点击三角箭头折叠/展开,折叠后将窗体拖到屏幕上方自动隐藏 
 3. :右击用户在线栏展开用户管理功能菜单,支持IP备注(备注后只要该IP上线依然显示其备注),加入黑名单和用户置顶 
-4. 私人会话界面点击下方显示器图标即可点对点远程协助,隔空帮忙再也不是梦,支持主动帮助以及被动请求 
-  因为我在自己电脑上开发所以窗口偏大,但在高分辨率屏幕上刚好合适;
+
+### 未能解决的问题
+
+1. 聊天面板偶尔上面会多出很大空白,设置MaxSize都无效
+2. 远程协助偶尔连接失败
+3. 文件拖放发送有时编译后能使用,有时不能
+4. 生产模式时,远程协助模块有时编译后能使用,有时不能(有时在源文件中逛一下再编译就好了)
+5. c# 绘制性能无解
 
 ## 程序截图
 
-### 创建角色页面![image-20210131202313158](C:\Users\梅浩东\AppData\Roaming\Typora\typora-user-images\image-20210131202313158.png)
+### 创建角色页面
 
-### 头像选择![image-20210131202431816](C:\Users\梅浩东\AppData\Roaming\Typora\typora-user-images\image-20210131202431816.png)
+![image-20210131202313158](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202313158.png)
+
+### 头像选择
+
+![image-20210131202431816](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202431816.png)
 
 ### 主体界面
 
-![image-20210131202612162](C:\Users\梅浩东\AppData\Roaming\Typora\typora-user-images\image-20210131202612162.png)
+![image-20210131202612162](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202612162.png)
 
-![image-20210131202756421](C:\Users\梅浩东\AppData\Roaming\Typora\typora-user-images\image-20210131202756421.png)
+![image-20210131202756421](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202756421.png)
 
 ### 程序设置
 
-![image-20210131202827129](C:\Users\梅浩东\AppData\Roaming\Typora\typora-user-images\image-20210131202827129.png)
+![image-20210131202827129](https://gitee.com/haodong108/mini-talk/blob/master/Screenshot/image-20210131202827129.png)
 
 ### 远程协助
 
